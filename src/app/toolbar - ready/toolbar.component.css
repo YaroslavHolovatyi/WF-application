@@ -1,0 +1,13 @@
+mat-toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.logo-wrapper img{
+    width: 40px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.text-wrapper{
+    color: #d57b11;
+}

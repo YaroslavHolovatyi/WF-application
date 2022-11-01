@@ -1,0 +1,19 @@
+app-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+.card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+app-city-card{
+    padding: 15px;
+}
+.buttonHolder{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

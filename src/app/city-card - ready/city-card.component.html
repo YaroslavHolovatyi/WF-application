@@ -1,0 +1,26 @@
+<mat-card class="example-card" *ngIf="city">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{city.main.temp}}</mat-card-title>
+      <mat-card-subtitle>{{city.name}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/Ramparttown.webp" alt="cold image" *ngIf="city.main.temp<14 && city.main.temp>8">
+    <img mat-card-image src="../../assets/Towertown.webp" alt="freezing image" *ngIf="city.main.temp<8">
+    <img mat-card-image src="../../assets/Strongholdtown.webp" alt="hot image" *ngIf="city.main.temp<30 && city.main.temp>=22">
+    <img mat-card-image src="../../assets/Infernotown.webp" alt="superhot image" *ngIf="city.main.temp>=30">
+    <img mat-card-image src="../../assets/Castletown.webp" alt="normal day" *ngIf="city.main.temp<22 && city.main.temp>=14">
+    <mat-card-content>
+      <p>
+       {{city.weather[0].description}}
+      </p>
+      <p>Feels like: {{city.main.feels_like}}</p>
+      <p>Country: {{city.sys.country}}</p>
+      <p>Sunrise: {{city.sys.sunrise | date: 'hh:mm'}}</p>
+      <p>Sunset: {{city.sys.sunset | date: 'hh:mm'}}</p>
+      <p>Wind Speed: {{city.wind.speed}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" (click)="addToSaved()">Add to your list</button>
+    </mat-card-actions>
+  </mat-card>
+  

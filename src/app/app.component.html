@@ -1,0 +1,14 @@
+<app-toolbar></app-toolbar>
+<app-search></app-search>
+<div class="main-content">
+    <div class="buttonHolder">
+        <button mat-stroked-button color="primary" (click)="showSavedCities()">Show your saved cities!</button>
+        <button mat-stroked-button color="warn" (click)="continueSearch()">Get back to search...</button>
+    </div>
+    <div class="card-wrapper">
+    <app-city-card *ngFor="let cityCard of cities"
+                    [city]="cityCard"></app-city-card>
+</div>
+</div>
+
+<router-outlet></router-outlet>
