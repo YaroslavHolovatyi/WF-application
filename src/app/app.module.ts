@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CityCardComponent } from './city-card - ready/city-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './Services/weather.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { WeatherService } from './Services/weather.service';
     MaterialModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
     
   ],
   providers: [WeatherService],

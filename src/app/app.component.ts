@@ -11,6 +11,7 @@ import { WeatherService } from './Services/weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  p:number =1;
 
   title = 'weather-forecast app';
   cities: CityCard[] =[];

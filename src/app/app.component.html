@@ -6,9 +6,9 @@
         <button mat-stroked-button color="warn" (click)="continueSearch()">Get back to search...</button>
     </div>
     <div class="card-wrapper">
-    <app-city-card *ngFor="let cityCard of cities"
+    <app-city-card *ngFor="let cityCard of cities | paginate : {itemsPerPage: 5, currentPage : p}"
                     [city]="cityCard"></app-city-card>
 </div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 
-<router-outlet></router-outlet>
